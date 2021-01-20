@@ -1,4 +1,6 @@
 <?php
+require_once('connection.php');
+    
     class User{
         public $Name;
         public $Username;
@@ -13,6 +15,8 @@
             echo "<br>";
             echo "{$this->name} Posted a Status";
         }
+
+    $sql = "";
     }
 
     $myname = new User();
