@@ -108,7 +108,13 @@
             }
           },
           "409" : {
-            "description" : "an existing item already exists"
+            "description" : "an existing item already exists",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/Already_Exist"
+              }
+            }
           }
         }
       }
@@ -194,12 +200,20 @@
         }
       }
     },
-    "Model" : {
+    "Already_Exist" : {
       "type" : "object",
       "properties" : {
-        "id" : {
-          "type" : "integer",
-          "format" : "int64"
+        "status_code" : {
+          "type" : "string",
+          "example" : 409
+        },
+        "message_id" : {
+          "type" : "string",
+          "example" : "User Already Used"
+        },
+        "message" : {
+          "type" : "string",
+          "example" : "Unautorized Access"
         }
       }
     }
