@@ -55,7 +55,7 @@
             "schema" : {
               "type" : "array",
               "items" : {
-                "$ref" : "#/definitions/InventoryItem"
+                "$ref" : "#/definitions/Manufacturer"
               }
             }
           },
@@ -104,22 +104,10 @@
   },
   "definitions" : {
     "InventoryItem" : {
-      "type" : "object",
-      "required" : [ "2019-00481-TG-0", "Bustamante", "manufacturer", "releaseDate" ],
       "properties" : {
-        "id" : {
-          "type" : "string",
-          "format" : "uuid",
-          "example" : "2019-00481-TG-0"
-        },
         "name" : {
           "type" : "string",
           "example" : "Bustamante, Jhon Nino"
-        },
-        "releaseDate" : {
-          "type" : "string",
-          "format" : "date-time",
-          "example" : "2016-08-29T09:12:33.001Z"
         },
         "manufacturer" : {
           "$ref" : "#/definitions/Manufacturer"
@@ -129,18 +117,10 @@
     "Manufacturer" : {
       "required" : [ "Bustamante, Jhon Nino S." ],
       "properties" : {
-        "name" : {
-          "type" : "string",
-          "example" : "Bustamante, Jhon Nino S."
-        },
         "homePage" : {
           "type" : "string",
           "format" : "url",
           "example" : "http://localhost/x/swagger"
-        },
-        "phone" : {
-          "type" : "string",
-          "example" : 951.0
         }
       }
     }
