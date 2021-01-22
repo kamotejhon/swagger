@@ -99,7 +99,13 @@
             }
           },
           "400" : {
-            "description" : "invalid input, object invalid"
+            "description" : "invalid input, object invalid",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/Invalid_Input"
+              }
+            }
           },
           "409" : {
             "description" : "an existing item already exists"
@@ -171,7 +177,24 @@
         }
       }
     },
-    "Invalid Input" : {
+    "Invalid_Input" : {
+      "type" : "object",
+      "properties" : {
+        "status_code" : {
+          "type" : "string",
+          "example" : 400
+        },
+        "message_id" : {
+          "type" : "string",
+          "example" : "Invalid Input Access"
+        },
+        "message" : {
+          "type" : "string",
+          "example" : "Unautorized Access"
+        }
+      }
+    },
+    "Model" : {
       "type" : "object",
       "properties" : {
         "id" : {
