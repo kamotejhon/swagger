@@ -81,7 +81,13 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "success"
+            "description" : "search results matching criteria",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/InventoryItem"
+              }
+            }
           },
           "201" : {
             "description" : "item created"
