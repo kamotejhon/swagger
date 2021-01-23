@@ -65,19 +65,19 @@ All URIs are relative to *https://virtserver.swaggerhub.com/kamotejhon/kamote/1.
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AdminsApi* | **addInventory** | **POST** /inventory | adds an inventory item
-*DevelopersApi* | **searchInventory** | **GET** /inventory | searches inventory
+*AdminsApi* | **addInventory** | **POST** /Add_Post_Status | adds an inventory item
+*DevelopersApi* | **searchInventory** | **GET** /Add_Post_Status | searches inventory
 
 
 ## Documentation for Models
 
  - [AlreadyExist](AlreadyExist.md)
+ - [Friends](Friends.md)
+ - [FriendsData](FriendsData.md)
  - [InvalidInput](InvalidInput.md)
- - [InventoryItem](InventoryItem.md)
- - [Manufacturer](Manufacturer.md)
- - [ManufacturerData](ManufacturerData.md)
  - [Modasd](Modasd.md)
  - [ModasdData](ModasdData.md)
+ - [Status](Status.md)
 
 
 ## Documentation for Authorization

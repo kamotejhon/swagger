@@ -12,10 +12,10 @@
 package io.swagger.client.api
 
 import io.swagger.client.model.AlreadyExist
+import io.swagger.client.model.Friends
 import io.swagger.client.model.InvalidInput
-import io.swagger.client.model.InventoryItem
-import io.swagger.client.model.Manufacturer
 import io.swagger.client.model.Modasd
+import io.swagger.client.model.Status
 import io.swagger.client.core._
 import io.swagger.client.core.CollectionFormats._
 import io.swagger.client.core.ApiKeyLocations._
@@ -26,17 +26,17 @@ object AdminsApi {
    * Adds an item to the system
    * 
    * Expected answers:
-   *   code 200 : Seq[Manufacturer] (search results matching criteria)
+   *   code 200 : Seq[Friends] (search results matching criteria)
    *   code 201 : Seq[Modasd] (item created)
    *   code 400 : Seq[InvalidInput] (invalid input, object invalid)
    *   code 409 : Seq[AlreadyExist] (an existing item already exists)
    * 
    * @param inventoryItem Inventory item to add
    */
-  def addInventory(inventoryItem: Option[InventoryItem] = None): ApiRequest[Seq[Manufacturer]] =
-    ApiRequest[Seq[Manufacturer]](ApiMethods.POST, "https://virtserver.swaggerhub.com/kamotejhon/kamote/1.0.0", "/inventory", "application/json")
+  def addInventory(inventoryItem: Option[Status] = None): ApiRequest[Seq[Friends]] =
+    ApiRequest[Seq[Friends]](ApiMethods.POST, "https://virtserver.swaggerhub.com/kamotejhon/kamote/1.0.0", "/Add_Post_Status", "application/json")
       .withBody(inventoryItem)
-      .withSuccessResponse[Seq[Manufacturer]](200)
+      .withSuccessResponse[Seq[Friends]](200)
       .withErrorResponse[Seq[Modasd]](201)
       .withErrorResponse[Seq[InvalidInput]](400)
       .withErrorResponse[Seq[AlreadyExist]](409)

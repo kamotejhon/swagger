@@ -11,7 +11,9 @@
  */
 package io.swagger.client.api
 
-import io.swagger.client.model.Manufacturer
+import io.swagger.client.model.Friends
+import io.swagger.client.model.InvalidInput
+import io.swagger.client.model.Modasd
 import io.swagger.client.core._
 import io.swagger.client.core.CollectionFormats._
 import io.swagger.client.core.ApiKeyLocations._
@@ -22,20 +24,22 @@ object DevelopersApi {
    * By passing in the appropriate options, you can search for available inventory in the system 
    * 
    * Expected answers:
-   *   code 200 : Seq[Manufacturer] (search results matching criteria)
-   *   code 400 :  (bad input parameter)
+   *   code 200 : Seq[Friends] (Added Friend)
+   *   code 201 : Seq[Modasd] (Posted Status)
+   *   code 400 : Seq[InvalidInput] (Invalid input Parameter)
    * 
    * @param searchString pass an optional search string for looking up inventory
    * @param skip number of records to skip for pagination
    * @param limit maximum number of records to return
    */
-  def searchInventory(searchString: Option[String] = None, skip: Option[Int] = None, limit: Option[Int] = None): ApiRequest[Seq[Manufacturer]] =
-    ApiRequest[Seq[Manufacturer]](ApiMethods.GET, "https://virtserver.swaggerhub.com/kamotejhon/kamote/1.0.0", "/inventory", "application/json")
+  def searchInventory(searchString: Option[String] = None, skip: Option[Int] = None, limit: Option[Int] = None): ApiRequest[Seq[Friends]] =
+    ApiRequest[Seq[Friends]](ApiMethods.GET, "https://virtserver.swaggerhub.com/kamotejhon/kamote/1.0.0", "/Add_Post_Status", "application/json")
       .withQueryParam("searchString", searchString)
       .withQueryParam("skip", skip)
       .withQueryParam("limit", limit)
-      .withSuccessResponse[Seq[Manufacturer]](200)
-      .withErrorResponse[Unit](400)
+      .withSuccessResponse[Seq[Friends]](200)
+      .withErrorResponse[Seq[Modasd]](201)
+      .withErrorResponse[Seq[InvalidInput]](400)
       
 
 }
