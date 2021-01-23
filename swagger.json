@@ -123,7 +123,7 @@
   "definitions" : {
     "InventoryItem" : {
       "type" : "object",
-      "required" : [ "2019-00481-TG-0", "Bustamante", "manufacturer", "releaseDate" ],
+      "required" : [ "id", "name", "manufacturer", "releaseDate" ],
       "properties" : {
         "id" : {
           "type" : "string",
@@ -134,10 +134,9 @@
           "type" : "string",
           "example" : "Bustamante, Jhon Nino"
         },
-        "releaseDate" : {
+        "Email" : {
           "type" : "string",
-          "format" : "date-time",
-          "example" : "2016-08-29T09:12:33.001Z"
+          "example" : "jhonbustamante011501@gmail.com"
         }
       }
     },
