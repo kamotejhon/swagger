@@ -138,31 +138,43 @@
           "type" : "string",
           "format" : "date-time",
           "example" : "2016-08-29T09:12:33.001Z"
-        },
-        "manufacturer" : {
-          "$ref" : "#/definitions/Manufacturer"
         }
       }
     },
     "Manufacturer" : {
-      "required" : [ "Bustamante, Jhon Nino S." ],
+      "required" : [ "name", "usern name", "Email" ],
       "properties" : {
-        "name" : {
+        "status_code" : {
           "type" : "string",
-          "example" : "Bustamante, Jhon Nino"
+          "example" : 200
         },
-        "homePage" : {
+        "message_id" : {
           "type" : "string",
-          "format" : "url",
-          "example" : "http://localhost/x/swagger"
+          "example" : "success"
         },
-        "phone" : {
+        "message" : {
           "type" : "string",
-          "example" : 9.512282798E9
+          "example" : "SUCCESS"
         },
-        "Email" : {
-          "type" : "string",
-          "example" : "jhonbustamante011501@gmail.com"
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "name" : {
+                "type" : "string",
+                "example" : "Jhon Nino S. Bustamante"
+              },
+              "homepage" : {
+                "type" : "string",
+                "example" : "http://localhost/x/swagger"
+              },
+              "Email" : {
+                "type" : "string",
+                "example" : "jhonbustamante011501@gmail.com"
+              }
+            }
+          }
         }
       }
     },
@@ -180,6 +192,30 @@
         "message" : {
           "type" : "string",
           "example" : "Access Granted"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "added friend" : {
+                "type" : "string",
+                "example" : "Jhon Nino S. Bustamante"
+              },
+              "posted status" : {
+                "type" : "string",
+                "example" : "SanaOL May Jowa, Sanal Ol mAhal"
+              },
+              "homepage" : {
+                "type" : "string",
+                "example" : "http://localhost/x/swagger"
+              },
+              "Email" : {
+                "type" : "string",
+                "example" : "jhonbustamante011501@gmail.com"
+              }
+            }
+          }
         }
       }
     },
