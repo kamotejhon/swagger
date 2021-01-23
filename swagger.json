@@ -166,7 +166,7 @@
               },
               "homepage" : {
                 "type" : "string",
-                "example" : "http://localhost/x/swagger"
+                "example" : "https://github.com/kamotejhon/swagger"
               },
               "Email" : {
                 "type" : "string",
@@ -207,7 +207,7 @@
               },
               "homepage" : {
                 "type" : "string",
-                "example" : "http://localhost/x/swagger"
+                "example" : "https://github.com/kamotejhon/swagger"
               },
               "Email" : {
                 "type" : "string",
